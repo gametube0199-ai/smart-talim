@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, BookOpen, BrainCircuit, ClipboardCheck } from 'lucide-react';
+import { ArrowRight, BrainCircuit } from 'lucide-react';
 
 export function AppNav() {
   return (
@@ -18,9 +18,10 @@ export function AppNav() {
         <nav className="hidden items-center gap-6 md:flex">
           <Link href="/" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Bosh sahifa</Link>
           <Link href="/dashboard" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Dashboard</Link>
-          <Link href="/profile" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Profil</Link>
           <Link href="/tests" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Testlar</Link>
           <Link href="/learning-plan" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Learning plan</Link>
+          <Link href="/portfolio" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Portfolio</Link>
+          <Link href="/analytics" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Analytics</Link>
         </nav>
 
         <div className="flex items-center gap-3">
