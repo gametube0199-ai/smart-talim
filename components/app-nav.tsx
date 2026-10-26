@@ -1,14 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, BrainCircuit, FileText, LayoutDashboard, LogIn, ShieldCheck, UserRound } from 'lucide-react';
-
-const navItems = [
-  { href: '/', label: 'Bosh sahifa', icon: LayoutDashboard },
-  { href: '/dashboard', label: 'Dashboard', icon: BrainCircuit },
-  { href: '/profile', label: 'Profil', icon: UserRound },
-  { href: '/signin', label: 'Kirish', icon: LogIn },
-  { href: '/signup', label: 'Ro’yxatdan o’tish', icon: FileText },
-  { href: '/forgot-password', label: 'Parolni tiklash', icon: ShieldCheck },
-];
+import { ArrowRight, BookOpen, BrainCircuit, ClipboardCheck } from 'lucide-react';
 
 export function AppNav() {
   return (
@@ -25,17 +16,15 @@ export function AppNav() {
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
-          {navItems.map(({ href, label }) => (
-            <Link key={href} href={href} className="text-sm font-medium text-slate-600 transition hover:text-brand-700">
-              {label}
-            </Link>
-          ))}
+          <Link href="/" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Bosh sahifa</Link>
+          <Link href="/dashboard" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Dashboard</Link>
+          <Link href="/profile" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Profil</Link>
+          <Link href="/tests" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Testlar</Link>
+          <Link href="/learning-plan" className="text-sm font-medium text-slate-600 transition hover:text-brand-700">Learning plan</Link>
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link href="/signin" className="button-secondary hidden sm:inline-flex">
-            Kirish
-          </Link>
+          <Link href="/signin" className="button-secondary hidden sm:inline-flex">Kirish</Link>
           <Link href="/signup" className="button-primary">
             Boshlash <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
